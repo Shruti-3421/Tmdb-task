@@ -1,0 +1,69 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing:border-box;
+}
+
+body{
+	background-color: darkblue;
+}
+
+header{
+	background-color: #22254b;
+}
+
+.logo{
+	width: 140px;
+	display: inline-block;
+}
+
+.logo img{
+	width: 100%;
+	background-color: transparent;
+    color: #007dff;	
+}
+
+.movieCard{
+	height: 450px;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	border: 2px solid red;
+}
+
+.movieCard img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.titleInfo{
+	width:100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	background-color: #007fd4;	
+}
+
+.overview{
+	width:100%;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	background-color: purple;
+	color: #fff;
+    height: 70%;
+   /* transform: translateY(130%);*/
+    transform: scale(0);
+    opacity: 0;
+	overflow-Y: auto;
+    transition: all .4s ease-in-out;
+}
+
+
+.movieCard:hover .overview{
+    /*transform: translateY(0%);*/
+	transform: scale(1);
+	 opacity: 1;
+}
